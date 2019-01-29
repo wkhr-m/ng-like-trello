@@ -1,0 +1,20 @@
+.home-page {
+  padding-top: 64px;
+  background-color: #F7F8F8;
+  height: 100%;
+  .content {
+    margin-left: 300px;
+  }
+}
+
+@media screen and (width: 711px) {
+  .home-page {
+    .content {
+      width: 100%;
+      min-width: 352px;
+      padding-left: 20px;
+      padding-right: 20px;
+      margin: 0;
+    }
+  }
+}

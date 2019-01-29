@@ -1,0 +1,266 @@
+/* Add application styles & imports to this file! */
+
+body {
+  font-family: Lato;
+  height: 100%;
+}
+
+@import "~@angular/cdk/overlay";
+@include cdk-overlay();
+.draggable {
+  cursor: move;
+  user-select: none;
+}
+
+.cdk-overlay-pane {
+  cursor: move;
+}
+
+.draggable,
+.cdk-overlay-pane {
+  img {
+    -webkit-user-drag: none;
+    -khtml-user-drag: none;
+    -moz-user-drag: none;
+    -o-user-drag: none;
+    user-drag: none;
+  }
+}
+
+.cdk-overlay-pane.animated {
+  transition: margin 300ms ease-in-out;
+}
+
+.movable:not(.dragging) {
+  transition: transform 300ms ease-in-out;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  visibility: hidden;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%; // 1.0rem=10px
+  line-height: 1.25;
+  letter-spacing: 0.05rem;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4rem;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background-color: #fff;
+}
+
+body.scroll-fixed {
+  position: fixed;
+  overflow-y: scroll; // Set top via current scrollTop.
+}
+
+img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+}
+
+input,
+textarea,
+select,
+button {
+  font-size: 100%;
+  letter-spacing: 0.05rem;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2.0rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+}
+
+h5 {
+  font-size: 1.5rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}
+
+a {
+  color: #1565C0;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #4f98ec;
+  outline: none;
+}
+
+a:visited {
+  color: #0b0080;
+}
+
+b {
+  font-weight: bold;
+}
+
+em {
+  background: #f4ec42;
+}

@@ -1,0 +1,17 @@
+<div class="board-page">
+	<div class="header">
+		<span class="title">yes-cdk-dnd</span>
+	</div>
+
+	<div class="lists">
+		<ul class="list" *ngFor="let list of lists" cdkDropList [cdkDropListData]="list.cardIds" [id]="list.idList"
+		 [cdkDropListConnectedTo]="getListIds(list.idList)" (cdkDropListDropped)="drop($event)">
+			<li class="list-header">
+				<h2>{{list.name}}</h2>
+			</li>
+			<li class="card" *ngFor="let cardId of list.cardIds" cdkDrag>
+				{{cards[cardId]?.desc}}
+			</li>
+		</ul>
+	</div>
+</div>

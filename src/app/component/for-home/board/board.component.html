@@ -1,0 +1,25 @@
+<div class="all-bords">
+  <ng-container *ngFor="let header of boardHeader">
+    <div class="content-board" *ngIf="boards[header.id] && boards[header.id].length >0">
+      <h3>
+        <i [class]="header.icon"></i>
+        {{header.title}}
+      </h3>
+      <ul class="boards">
+        <li class="bord {{item.color}}" *ngFor="let item of boards[header.id]">
+          <a [routerLink]="[item.id]">
+            <span class="board-title">{{item.title}}</span>
+            <span class="icon">
+              <i class="icon-star far fa-star" [class.fav]="item.fav" (click)="onFavBoard(item, $event)" title="クリックしてこのボードにスターを付けると、ボードリストの上部（スター付きボードのセクション）に表示されます。"></i>
+            </span>
+          </a>
+        </li>
+        <li class="bord" *ngIf="header.id === 'personal'">
+          <div class="board-title new">
+            <p>新しいボードを作成</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </ng-container>
+</div>

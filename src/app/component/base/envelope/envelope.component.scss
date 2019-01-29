@@ -1,0 +1,42 @@
+.envelope {
+  display: flex;
+  position: fixed;
+  height: 32px;
+  background: #026aa7;
+  z-index: 10;
+  padding: 4px;
+  top: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  .actions {
+    display: flex;
+    .action {
+      width: 32px;
+      height: 32px;
+      margin: 0 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: hsla(0, 0%, 100%, .3);
+      border-radius: 3px;
+      cursor: pointer;
+      &:hover {
+        background: hsla(0, 0%, 100%, .2);
+      }
+      a {
+        color: #fff;
+      }
+      &.account {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+.content {
+  padding-top: 40px;
+  height: 100%;
+}
